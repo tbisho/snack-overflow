@@ -42,6 +42,6 @@ app.get('/profile', isLoggedIn, (req, res) => {
 
 app.use('/auth', require('./routes/auth'));
 
-var server = app.listen(process.env.PORT || 3000, ()=> console.log(`🎧You're listening to the smooth sounds of port ${process.env.PORT || 3000}🎧`));
+var server = app.listen(process.env.PORT || 3000, ()=> console.log(`nomnomnom on port ${process.env.PORT || 3000}🎧`));
 
 module.exports = server;
