@@ -1,16 +1,22 @@
 {
   "development": {
-    "database": "express_auth_development",
+    "username": "root",
+    "password": null,
+    "database": "snackoverflow",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "express_auth_test",
+    "username": "root",
+    "password": null,
+    "database": "snackoverflow_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "express_auth_production",
+    "username": "root",
+    "password": null,
+    "database": "snackoverflow_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
