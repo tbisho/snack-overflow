@@ -77,10 +77,6 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   user.beforeCreate((pendingUser, options) => {
-<<<<<<< HEAD
-
-=======
->>>>>>> submain
     // if a user exists & if that user has a password
 
     if (pendingUser && pendingUser.password) {
