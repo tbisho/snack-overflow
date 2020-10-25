@@ -17,10 +17,8 @@ db.user.findOrCreate({
     email: "heythere@aol.com"
   }
 }).then(function([returnedUser, created]) {
-  // Second step: findOrCreate a sback to associate with Susan
+  // Second step: findOrCreate a snack to associate with Susan
   db.snack.findOrCreate({
-    // be mindful of casing and spelling because SQL is picky! 
-    // => "Stinky bear" !== "stinky bear"
     where: { name: "Doritas", description: "Wasabi" }
   }).then(function([returnedSnack, created]) {
     // Last Step: associating the user to the snack - addSnack()
