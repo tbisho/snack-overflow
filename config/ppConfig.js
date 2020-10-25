@@ -13,7 +13,7 @@ passport.serializeUser((user, cb) => {
 // and looking it up in the DB
 
 passport.deserializeUser((id, cb) => {
-  db.user.finkdByPk(id).then(user => {
+  db.user.findByPk(id).then(user => {
     cb(null, user);
   }).catch(cb)
 });
