@@ -10,6 +10,7 @@
 * User will be able to add snacks to their favorite snacks.
 
 ## General Tasks
+Use Trello more (lol)
 * ~~Create a route to go to the snack page.~~
 * ~~Create a link that take us to our snack page.~~
   * Add a button to profile page to put the user into the create route
@@ -19,7 +20,7 @@
 * Create an 'explore snacks page'
   * Add to create the page?
   * Seed the database with snacks
-  * Create an add button to add the snack to the user db via the join table (like Pokemon)
+  * Create an add button to add the snack to the suser db via the join table (like Pokemon)
 
 * Once a user creates an account for the first time, route them to the add-a-snack page.
 
@@ -35,6 +36,7 @@ Walkthrough code, familiarization
 Get first route up and running (view snack page)
 
 #### Monday
+Report back on forEach Loops
 Have all routes up and running
 * Create a snack
 * Add a snack
