@@ -20,7 +20,6 @@ db.user.findOrCreate({
   // Second step: findOrCreate a sback to associate with Susan
   db.snack.findOrCreate({
     // be mindful of casing and spelling because SQL is picky! 
-    // => "Stinky bear" !== "stinky bear"
     where: { name: "Doritas", description: "Wasabi" }
   }).then(function([returnedSnack, created]) {
     // Last Step: associating the user to the snack - addSnack()

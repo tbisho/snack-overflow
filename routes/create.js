@@ -6,18 +6,20 @@ const express = require('express');
 const db = require('../models');
 const router = express.Router();
 const passport = require('../config/ppConfig');
+const isLoggedIn = require('./middleware/isLoggedIn');
 
 
-router.get('/snack', (req, res) => {
+router.get('/snack', isLoggedIn, (req, res) => {
   res.render('./snack/snack')
 });
 
-router.post('/profile', (req, res) => {
+router.post('/profile', isLoggedIn, (req, res) => {
   // we will allow the user to db.findOrCreate
   // {where the constraint is by name}
   // with snack:name
   // snack:description
   // snack:imgUrl
 })
+
 
 module.exports = router;
