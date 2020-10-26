@@ -3,8 +3,12 @@
 <h3>Welcome to your Snack Profile</h3>
 
 <p>See Your Snacks (DB pull list goes here)</p>
-<form method="POST" action="/delete?_method=DELETE"> 
-  <button type="submit" value="<%= snack.id %>"name="name">Blechk</button>
-</form>
+
+<% snacks.forEach((snack) => { %>
+      <h4><%= snack.name %></h4>
+      <form method="POST" action="/delete?_method=DELETE"> 
+        <button type="submit" value="<%= snack.id %>"name="name">Blechk</button>
+      </form>
+  <% }); %>
 <a href="/snack"> <p>Add a Snack</p></a>
 <!-- add a button and a route that goes to snackadd.ejs -->

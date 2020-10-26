@@ -9,6 +9,7 @@ router.use(methodOverride('_method'))
 router.delete('/profile', isLoggedIn, (res, req) => {
   //Need to verify a way to ensure that the SNACK is getting deleted
   // maybe req.body.snack.id or req.body.snack.name
+  // db.user.findAll()
   // const deleteSnack = req.body.name;
   // console.log(deleteSnack)
   // db.snack.destroy({
