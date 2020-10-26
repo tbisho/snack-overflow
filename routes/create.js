@@ -14,6 +14,8 @@ router.get('/snack', isLoggedIn, (req, res) => {
   // when a request is made to the snack page, render snack.ejs
   console.log(isLoggedIn)
   res.render('./snack/snack')
+
+  
 });
 
 //Post /snacks - receive the name, description & imgUrl of the snack and add it to the DB
@@ -30,7 +32,7 @@ db.user.findOrCreate({
 }).then(function([returnedUser, created]) {
   // Second step: findOrCreate a snack to associate with Susan
   console.log(returnedUser == req.user)
-  console.log(returnedUser, req.user)
+  console.log('this is the returned user' + returnedUser, req.user)
   db.snack.findOrCreate({
     where: {
       name: req.body.name,
@@ -48,11 +50,6 @@ db.user.findOrCreate({
     })
   })
 })
-
-
-
-
-
   // db.snack.findOrCreate({
   //   where: {
   //     name: req.body.name,
