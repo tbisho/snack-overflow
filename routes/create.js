@@ -6,24 +6,6 @@ const express = require('express');
 const db = require('../models');
 const router = express.Router();
 const passport = require('../config/ppConfig');
-<<<<<<< HEAD
-const isLoggedIn = require('./middleware/isLoggedIn');
-
-
-router.get('/snack', isLoggedIn, (req, res) => {
-  res.render('./snack/snack')
-});
-
-router.post('/profile', isLoggedIn, (req, res) => {
-  // we will allow the user to db.findOrCreate
-  // {where the constraint is by name}
-  // with snack:name
-  // snack:description
-  // snack:imgUrl
-})
-
-
-=======
 //need to require this on any page you must be loggedin to use
 const isLoggedIn = require('../middleware/isLoggedIn');
 
@@ -88,5 +70,4 @@ db.user.findOrCreate({
   res.redirect('/profile')
 }) 
 
->>>>>>> submain
 module.exports = router;

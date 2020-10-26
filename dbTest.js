@@ -19,10 +19,7 @@ db.user.findOrCreate({
 }).then(function([returnedUser, created]) {
   // Second step: findOrCreate a snack to associate with Susan
   db.snack.findOrCreate({
-<<<<<<< HEAD
-    // be mindful of casing and spelling because SQL is picky! 
-=======
->>>>>>> submain
+
     where: { name: "Doritas", description: "Wasabi" }
   }).then(function([returnedSnack, created]) {
     // Last Step: associating the user to the snack - addSnack()
