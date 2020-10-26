@@ -13,8 +13,8 @@ const db = require('./models')
 db.user.findOrCreate({
   // constraint
   where: {
-    name: "Susan",
-    email: "heythere@aol.com"
+    name: "Martin",
+    email: "martin@gmail.com"
   }
 }).then(function([returnedUser, created]) {
   // Second step: findOrCreate a snack to associate with Susan
