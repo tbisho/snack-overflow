@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+
+      //does an association need to be defined here?
+      
     }
   };
   user_snack.init({
