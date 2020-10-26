@@ -36,12 +36,15 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 // would we want to pull this out and make it its own route?
-app.get('/profile', isLoggedIn, (req, res) => {
-  res.render('profile');
-});
+// app.get('/profile', isLoggedIn, (req, res) => {
+//   res.render('profile');
+// });
+
+
 
 app.use('/auth', require('./routes/auth'));
 app.use('/', require('./routes/create'));
+app.use('/',require('./routes/profile'))
 
 var server = app.listen(process.env.PORT || 3000, ()=> console.log(`nomnomnom on port ${process.env.PORT || 3000}`));
 
