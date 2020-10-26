@@ -1,14 +1,14 @@
 const db = require('./models')
 
 // create a user for us to use
-db.user.create({
-  name: "Susan Doolittle",
-  email: "heythere@aol.com",
-  password: "erjwklejr"
-}).then( function(createdUser) {
-  console.log(createdUser.dataValues)
-  console.log('Successfully created ' + createdUser.dataValues.firstName)
-})
+// db.user.create({
+//   name: "Susan Doolittle",
+//   email: "heythere@aol.com",
+//   password: "erjwklejr"
+// }).then( function(createdUser) {
+//   console.log(createdUser.dataValues)
+//   console.log('Successfully created ' + createdUser.dataValues.firstName)
+// })
 
 db.user.findOrCreate({
   // constraint
