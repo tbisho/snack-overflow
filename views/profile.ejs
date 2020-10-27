@@ -1,27 +1,17 @@
+<h2>Snacks</h2>
+<h3>Welcome to your Snack Profile</h3>
 
-  <h2>Snacks</h2>
-  <h3>Welcome to your Snack Profile</h3>
+<p>See Your Snacks (DB pull list goes here)</p>
 
-
-  <div class="row">
-    <%snacks.forEach((snack) => { %>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="<%=snack.imgUrl%>" alt="snack image">
-          <div class="card-body">
-            <h2><%= snack.name %></h2>
-            <p class="card-text"><%= snack.description %></p>
-            <p><button>Remove</button></p>
-          </div>
-      </div>
-    <% }); %>
-  </div>
-
-
-
-
-
-
-
+<% snacks.forEach((snack) => { %>
+      <h4 id = "snackName"><%= snack.name %></h4>
+      <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
+        <!-- are we missing the ID here? Because snack.id gets pushed into the URL -->
+        <!-- Is there another array method to be used? -->
+        <input type="hidden" value="Delete" name="name"> 
+        <button type="submit">Blechk</button>
+      </form>
+  <% }); %>
 <a href="/snack"> <p>Add a Snack</p></a>
 <!-- add a button and a route that goes to snackadd.ejs -->
 
