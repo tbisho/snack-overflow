@@ -1,14 +1,19 @@
+// AirBnB JavaScript Guide:
+//  use arrow functions on anonymous functions
+// single qoutations ' '
+
+// requirements
 const express = require('express');
 const db = require('../models')
 const router = express.Router();
 const passport = require('../config/ppConfig');
 
+// routes
 router.get('/signup', (req, res) => {
   res.render('auth/signup');
 });
 
 router.post('/signup', (req, res) => {
-  // find or create a user, providing the name and password as default values
   db.user.findOrCreate({
     where: {
       email: req.body.email
@@ -18,19 +23,16 @@ router.post('/signup', (req, res) => {
     }
   }).then(([user, created]) => {
     if (created) {
-      // if created, success and login
       console.log('user created');
       passport.authenticate('local', {
-        successRedirect: '/',
+        successRedirect: '/snack',
         successFlash: 'Account created and logged in'
       })(req, res);
     } else {
-      // if not created, the email already exists
       req.flash('error', 'Email already exists');
       res.redirect('/auth/signup');
     }
   }).catch(error => {
-    // if an error occurs, let's see what the error is
     req.flash('error', error.message);
     res.redirect('/auth/signup');
   });
@@ -53,4 +55,5 @@ router.get('/logout', (req, res) => {
   res.redirect('/');
 });
 
+// exports
 module.exports = router;
