@@ -48,7 +48,6 @@ app.get('/', (req, res) => {
 
 app.use('/auth', require('./routes/auth'));
 app.use('/', require('./routes/create'));
-// app.use('/', require('./routes/delete')); DELETE WHEN DONE
 app.use('/profile',require('./routes/profile'));
 
 // server
