@@ -17,11 +17,16 @@ WHERE u.id = us.user.id; */
 
 // //GET 'users' favorite snacks to display on profile
 router.get('/profile', isLoggedIn, (req, res) => {
-    console.log(res.locals.currentUser)
+    // console.log(res.locals.currentUser)
     res.locals.currentUser.getSnacks().then((foundSnacks) => {
         res.render('profile', {snacks: foundSnacks})
         })
     })
 
 
+router.delete('/profile', (req,res) => {
+    res.locals.currentUser.getSnacks().then((foundSnacks) => {
+        res.render('profile', {snacks: foundSnacks})
+        })
+})
 module.exports = router;

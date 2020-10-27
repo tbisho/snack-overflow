@@ -7,3 +7,14 @@ nav ul li {
 h1 {
   color: chartreuse;
 }
+
+.card-image-top {
+  height: 100px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.card{
+  margin: 20px;
+}
+
