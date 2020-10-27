@@ -36,9 +36,9 @@ router.delete('/:id', isLoggedIn, (req, res) => {
     }).then(([returnedSnack, created]) => {
       req.user.removeSnack(returnedSnack).then ( (relationInfo) => {
         res.redirect('/profile')
-      })
-    }) 
+    })
   }) 
+}) 
 
 
 // exports
