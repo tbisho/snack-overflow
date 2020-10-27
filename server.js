@@ -1,3 +1,8 @@
+// AirBnB JavaScript Guide:
+//  use arrow functions on anonymous functions
+// single qoutations ' '
+
+// requirements
 require('dotenv').config();
 const express = require('express');
 const layouts = require('express-ejs-layouts');
@@ -5,12 +10,15 @@ const session = require('express-session')
 const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
+const methodOverride = require('method-override')
 const app = express();
 
 app.set('view engine', 'ejs');
 
+// middleware
 app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'))
 app.use(express.static(__dirname + '/public'));
 app.use(layouts);
 
@@ -32,20 +40,18 @@ app.use((req, res, next) => {
   next();
 });
 
+// routes
+
 app.get('/', (req, res) => {
   res.render('index');
 });
-// would we want to pull this out and make it its own route?
-// app.get('/profile', isLoggedIn, (req, res) => {
-//   res.render('profile');
-// });
-
-
 
 app.use('/auth', require('./routes/auth'));
 app.use('/', require('./routes/create'));
-app.use('/',require('./routes/profile'))
+app.use('/profile',require('./routes/profile'));
 
+// server
 var server = app.listen(process.env.PORT || 3000, ()=> console.log(`nomnomnom on port ${process.env.PORT || 3000}`));
 
+// exports
 module.exports = server;

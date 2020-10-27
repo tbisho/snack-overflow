@@ -1,0 +1,122 @@
+[ 
+  snack {
+    dataValues: {
+      id: 2,
+      name: 'salt chips',
+      imgUrl: 'salt.jpg',
+      description: 'the saltiest',
+      createdAt: 2020-10-26T23:25:32.002Z,
+      updatedAt: 2020-10-26T23:25:32.002Z,
+      user_snack: [user_snack]
+    },
+    _previousDataValues: {
+      id: 2,
+      name: 'salt chips',
+      imgUrl: 'salt.jpg', 
+      description: 'the saltiest',
+      createdAt: 2020-10-26T23:25:32.002Z,
+      updatedAt: 2020-10-26T23:25:32.002Z,
+      user_snack: [user_snack]
+    },
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: [Array],
+      includeNames: [Array],
+      includeMap: [Object],
+      includeValidated: true,
+      attributes: [Array],
+      raw: true
+    },
+    isNewRecord: false,
+    user_snack: user_snack {
+      dataValues: [Object],
+      _previousDataValues: [Object],
+      _changed: Set(0) {},
+      _options: [Object],
+      isNewRecord: false
+    }
+  },
+  snack {
+    dataValues: {
+      id: 3,
+      name: 'taro chips',
+      imgUrl: 'taro.jpg',
+      description: 'crispy',
+      createdAt: 2020-10-26T23:25:50.024Z,
+      updatedAt: 2020-10-26T23:25:50.024Z,
+      user_snack: [user_snack]
+    },
+    _previousDataValues: {
+      id: 3,
+      name: 'taro chips',
+      imgUrl: 'taro.jpg',
+      description: 'crispy',
+      createdAt: 2020-10-26T23:25:50.024Z,
+      updatedAt: 2020-10-26T23:25:50.024Z,
+      user_snack: [user_snack]
+    },
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: [Array],
+      includeNames: [Array],
+      includeMap: [Object],
+      includeValidated: true,
+      attributes: [Array],
+      raw: true
+    },
+    isNewRecord: false,
+    user_snack: user_snack {
+      dataValues: [Object],
+      _previousDataValues: [Object],
+      _changed: Set(0) {},
+      _options: [Object],
+      isNewRecord: false
+    }
+  },
+  snack {
+    dataValues: {
+      id: 4,
+      name: 'Doritos',
+      imgUrl: 'Image URL',
+      description: 'Cool Ranch',
+      createdAt: 2020-10-26T23:26:06.632Z,
+      updatedAt: 2020-10-26T23:26:06.632Z,
+      user_snack: [user_snack]
+    },
+    _previousDataValues: {
+      id: 4,
+      name: 'Doritos',
+      imgUrl: 'Image URL',
+      description: 'Cool Ranch',
+      createdAt: 2020-10-26T23:26:06.632Z,
+      updatedAt: 2020-10-26T23:26:06.632Z,
+      user_snack: [user_snack]
+    },
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      include: [Array],
+      includeNames: [Array],
+      includeMap: [Object],
+      includeValidated: true,
+      attributes: [Array],
+      raw: true
+    },
+    isNewRecord: false,
+    user_snack: user_snack {
+      dataValues: [Object],
+      _previousDataValues: [Object],
+      _changed: Set(0) {},
+      _options: [Object],
+      isNewRecord: false
+    }
+  }
+]
