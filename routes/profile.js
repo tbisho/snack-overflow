@@ -17,7 +17,6 @@ WHERE u.id = us.user.id; */
 
 // //GET 'users' favorite snacks to display on profile
 router.get('/profile', isLoggedIn, (req, res) => {
-    console.log(res.locals.currentUser)
     res.locals.currentUser.getSnacks().then((foundSnacks) => {
         res.render('profile', {snacks: foundSnacks})
         })
