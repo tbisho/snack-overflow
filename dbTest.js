@@ -1,6 +1,28 @@
 const db = require('./models')
 const methodOverride = require('method-override')
 
+//test out db comment create
+//create a comment and associate it with logged in user
+
+db.comment.findOrCreate({
+  where: {
+    text: "this is the GOAT snack",
+    userId: 1,
+    snackId: 2
+  }
+}).then(function([newComment]){
+  console.log(newComment.text)
+})
+
+
+
+
+
+
+
+
+
+
 // router.use(methodOverride('_method'))
 
 // create a user for us to use
@@ -13,15 +35,15 @@ const methodOverride = require('method-override')
 //   console.log('Successfully created ' + createdUser.dataValues.firstName)
 // })
 
-db.user.findOrCreate({
-  // constraint
-  where: {
-    id: 10
-  }
-}).then(function([returnedUser, created]) {
-  // Second step: findOrCreate a snack to associate with Susan
-  const snack = req.params.id
-  console.log(snack)
+// db.user.findOrCreate({
+//   // constraint
+//   where: {
+//     id: 10
+//   }
+// }).then(function([returnedUser, created]) {
+//   // Second step: findOrCreate a snack to associate with Susan
+//   const snack = req.params.id
+//   console.log(snack)
 //   db.snack.destroy({
 // }).then(function() {
 //   // Last Step: associating the user to the snack - addSnack()
@@ -32,7 +54,7 @@ db.user.findOrCreate({
 //       console.log(`${returnedSnack.name} added to ${returnedUser.name}`)
 //     })
   // })
-})
+// })
 
 // db.user.findOrCreate({
 //   where: {

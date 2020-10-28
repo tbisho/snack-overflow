@@ -17,25 +17,28 @@ router.get('/snack', isLoggedIn, (req, res) => {
 });
 
 router.post('/snack', isLoggedIn, (req, res) => {
-db.user.findOrCreate({
+  //refactored redundant route  
+  db.snack.findOrCreate({
     where: {
-      name: req.user.name,
-      email: req.user.email
+      name: req.body.name,
+      description: req.body.description,
+      imgUrl: req.body.imgUrl
     }
-  }).then(([returnedUser, created]) => {
-    db.snack.findOrCreate({
-      where: {
-        name: req.body.name,
-        description: req.body.description,
-        imgUrl: req.body.imgUrl
-      }
-    }).then(([returnedSnack, created]) => {
-      returnedUser.addSnack(returnedSnack).then( (relationInfo) => {
-        res.redirect('/profile')
-      })
+  }).then(([returnedSnack, created]) => {
+    req.user.addSnack(returnedSnack).then( (relationInfo) => {
+      res.redirect('/profile')
     })
   })
 })
+
+
+
+
+
+
+
+
+
 
 // exports
 module.exports = router;
