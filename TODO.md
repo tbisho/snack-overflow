@@ -28,8 +28,10 @@ Use Trello more (lol)
 #### Saturday
 Get boiler plate up and running
 GitHub up and running
- Branches going
- Everyone on same page.
+Branches going
+Everyone on same page.
+Databases Created
+Database assocations written (Thank you Tess)
 
 #### Sunday
 Walkthrough code, familiarization
