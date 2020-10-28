@@ -5,9 +5,8 @@
 
 <% snacks.forEach((snack) => { %>
       <h4 id = "snackName"><%= snack.name %></h4>
+      <a href="/detail/ <%= snack.id  %> ">View Snack</a>
       <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
-        <!-- are we missing the ID here? Because snack.id gets pushed into the URL -->
-        <!-- Is there another array method to be used? -->
         <input type="hidden" value="Delete" name="name"> 
         <button type="submit">Blechk</button>
       </form>
