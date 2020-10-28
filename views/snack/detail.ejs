@@ -6,14 +6,14 @@
 
 
 <!-- hidden input to send comment? -->
-<form action="" method="post">
+<form action="/comment/<%= snack.dataValues.id %>" method="POST">
     <div>
-    <textarea name="text" id="">
+    <textarea name="text" id="text">
     Hey... say something!
     </textarea>
     </div>
-    <input hidden type="submit" value="<%=comment.dataValues.id%>">
-    </form>
+    <button type="submit">Post Comment</button>
+</form>
 
 <!-- render comments here -->
 <p>~Pull comment content and render here~</p>

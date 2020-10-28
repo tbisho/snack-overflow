@@ -13,8 +13,11 @@ router.get('/:id', isLoggedIn, (req, res) => {
     {
       where: {
         id: req.params.id
-      }
+      },
+      include: [db.comment]
     }).then((snackDetails) => {
+    // snackDetails now has an array of comments
+    console.log(snackDetails)
       res.render('./snack/detail', {snack: snackDetails })
     })
   })
