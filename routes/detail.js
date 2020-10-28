@@ -13,8 +13,8 @@ router.get('/:id', isLoggedIn, (req, res) => {
       where: {
         id: req.params.id
       }
-    }).then((foundSnack) => {
-      res.render('./snack/detail', {snack: foundSnack })
+    }).then((snackDetails) => {
+      res.render('./snack/detail', {snack: snackDetails })
     })
   })
 
