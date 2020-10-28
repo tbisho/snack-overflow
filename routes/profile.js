@@ -15,8 +15,6 @@ router.use(methodOverride('_method'))
 
 // routes
 
-
-
 router.get('/', isLoggedIn, (req, res) => {
   res.locals.currentUser.getSnacks().then((foundSnacks) => {
     res.render('profile', {snacks: foundSnacks})
