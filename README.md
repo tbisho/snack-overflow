@@ -21,9 +21,15 @@
 
 ### Snack DB Model
 
+ Column Name | Data Type | Notes |
+
 ### Join Table Model
 
+ Column Name | Data Type | Notes |
+
 ### Default User Routes
+
+| Method | Path | Location | Purpose |
 
 ### Default Auth Routes
 
