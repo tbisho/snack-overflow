@@ -1,44 +1,6 @@
+
 nav ul li {
   text-decoration: none;
   display: inline-block;
   margin-right: .3em;
-}
-
-h1 {
-  color: chartreuse;
-}
-
-.card-image-top {
-  height: 100px;
-  width: 200px;
-  border-radius: 50%;
-}
-
-.card{
-  margin: 20px;
-}
-
-body, html {
-  height: 100%;
-}
-.bg {
-  /* The image used */
-  background-image: url("https://images.unsplash.com/photo-1554136298-bf5fa610048d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.form-group{
-  padding: 25px;
-  /* width: 50%; */
-}
-
-.btn-primary{
-  margin-top: 10px;
 }

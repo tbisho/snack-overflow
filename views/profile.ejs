@@ -5,22 +5,14 @@
 
 <p>See Your Snacks (DB pull list goes here)</p>
 
-
-  <% snacks.forEach((snack) => { %>
-      <img height="200px;" width="200px" src="<%=snack.imgUrl%>" alt="snack image">
-      <div>
-          <h4 id = "snackName"><%= snack.name %></h4>
-          <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
-            <p><%=snack.description%></p>
-            <input type="hidden" value="Delete" name="name"> 
-            <button type="submit">Blechk</button>
-            <!-- create a link that will -->
-            <a href="/detail/<%=snack.id%>">See Details</a>
-          </form>
-      <% }); %>
-    <a href="/snack"> <p>Add a Snack</p></a>
-    
-
-<!-- add a form that will take you to a suggested snack page -->
-<a href="#">Select from trending snacks</a>
+<% snacks.forEach((snack) => { %>
+      <h4 id = "snackName"><%= snack.name %></h4>
+      <a href="/detail/ <%= snack.id  %> ">View Snack</a>
+      <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
+        <input type="hidden" value="Delete" name="name"> 
+        <button type="submit">Blechk</button>
+      </form>
+  <% }); %>
+<a href="/snack"> <p>Add a Snack</p></a>
+<!-- add a button and a route that goes to snackadd.ejs -->
 
