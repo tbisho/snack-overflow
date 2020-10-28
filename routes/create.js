@@ -17,12 +17,6 @@ router.get('/snack', isLoggedIn, (req, res) => {
 });
 
 router.post('/snack', isLoggedIn, (req, res) => {
-db.user.findOrCreate({
-    where: {
-      name: req.user.name,
-      email: req.user.email
-    }
-  }).then(([returnedUser, created]) => {
     db.snack.findOrCreate({
       where: {
         name: req.body.name,
@@ -36,6 +30,7 @@ db.user.findOrCreate({
     })
   })
 })
+
 
 // exports
 module.exports = router;
