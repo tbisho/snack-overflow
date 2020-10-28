@@ -25,6 +25,7 @@
             </nav>
             <% } %>
         </ul>
+        <% if (!currentUser) { %>
         <form action="/auth/login" method="POST">
             <div class="form-group">
               <label for="auth-email">Email</label>
@@ -36,6 +37,7 @@
             </div>
             
           </form>
+          <% } %>
 
 
     </div>
