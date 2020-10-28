@@ -14,8 +14,6 @@ const isLoggedIn = require('../middleware/isLoggedIn');
 router.get('/snack', isLoggedIn, (req, res) => {
   console.log(isLoggedIn)
   res.render('./snack/snack')
-
-  
 });
 
 router.post('/snack', isLoggedIn, (req, res) => {
@@ -25,19 +23,18 @@ db.user.findOrCreate({
     email: req.user.email
   }
 }).then(([returnedUser, created]) => {
-  db.snack.findOrCreate({
-    where: {
-      name: req.body.name,
-      description: req.body.description,
-      imgUrl: req.body.imgUrl
-    }
-  }).then(([returnedSnack, created]) => {
-    returnedUser.addSnack(returnedSnack).then( (relationInfo) => {
-      res.redirect('/profile')
+    db.snack.findOrCreate({
+      where: {
+        name: req.body.name,
+        description: req.body.description,
+        imgUrl: req.body.imgUrl
+      }
+    }).then(([returnedSnack, created]) => {
+      returnedUser.addSnack(returnedSnack).then( (relationInfo) => {
+        res.redirect('/profile')
+      })
     })
   })
-})
-  res.redirect('/profile')
 })
 
 // exports

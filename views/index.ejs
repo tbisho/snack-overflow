@@ -1,3 +1,50 @@
-<h2>Welcome to Snack Overflow</h2>
+<div class="bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="/auth/signup">Signup</a>
+            </div>
+        </div>  
+        <div class="row" >
+            <div class="col-md-12">
+                <h3 class="text-left">
+                    Welcome to Snack Overflow
+                </h3>
+            </div>
+        </div> 
 
-<p>Head to Profile to add snacks!</p>
+        <h1></h1>
+        <ul>
+            <% if (!currentUser) { %>
+            <nav>
+                <li></li>
+                <li><a href="/auth/login">Login</a></li>
+                <% } else { %>
+                <li><a href="/auth/logout">Logout</a></li>
+                <li><a href="/profile">Profile</a></li>
+            </nav>
+            <% } %>
+        </ul>
+        <form action="/auth/login" method="POST">
+            <div class="form-group">
+              <label for="auth-email">Email</label>
+              <input class="form-control" id="auth-email" type="email" name="email">
+        
+              <label for="auth-password">Password</label>
+              <input class="form-control" id="auth-password" type="password" name="password">
+              <input type="submit" value="Log In" class="btn btn-primary">
+            </div>
+            
+          </form>
+
+
+    </div>
+</div>
+
+
+	</div>
+	
+
+    
+
+

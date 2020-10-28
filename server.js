@@ -49,6 +49,8 @@ app.get('/', (req, res) => {
 app.use('/auth', require('./routes/auth'));
 app.use('/', require('./routes/create'));
 app.use('/profile',require('./routes/profile'));
+app.use('/detail', require('./routes/detail'))
+
 
 // server
 var server = app.listen(process.env.PORT || 3000, ()=> console.log(`nomnomnom on port ${process.env.PORT || 3000}`));

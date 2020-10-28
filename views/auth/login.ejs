@@ -1,11 +1,19 @@
 
 <!-- Not a user? Sign up! -->
-<form action="/auth/login" method="POST">
-  <label for="auth-email">Email</label>
-  <input id="auth-email" type="email" name="email">
 
-  <label for="auth-password">Password</label>
-  <input id="auth-password" type="password" name="password">
+<h1>Welcome to Snack Overflow</h1>
+        
 
-  <input type="submit" value="Log In">
-</form>
+  <form action="/auth/login" method="POST">
+    <div class="form-group">
+      <label for="auth-email">Email</label>
+      <input class="form-control" id="auth-email" type="email" name="email">
+
+      <label for="auth-password">Password</label>
+      <input class="form-control" id="auth-password" type="password" name="password">
+      <input type="submit" value="Log In" class="btn btn-primary">
+    </div>
+    
+  </form>
+
+
