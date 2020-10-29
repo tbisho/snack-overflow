@@ -21,3 +21,5 @@ router.get('/:id', isLoggedIn, (req, res) => {
       res.render('./snack/detail', {snack: snackDetails })
     })
   })
+
+module.exports = router;

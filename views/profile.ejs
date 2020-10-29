@@ -1,11 +1,45 @@
-<a href="/auth/logout">Logout</a> |
-<a href="/profile">Profile</a>
 <h2>Snacks</h2>
 <h3>Welcome to your Snack Profile</h3>
 
 <p>See Your Snacks (DB pull list goes here)</p>
 
-<% snacks.forEach((snack) => { %>
+<div class="container-fluid">
+<a class="logout" href="/auth/logout">Logout</a> |
+<a class="profile" href="/profile">Profile</a>
+
+  <div class="row">
+      <div class="col-12">
+      <div class="card card-inverse" style="background-color: #211F26; border-color: #333;">
+        <div class="card-block">
+			  <div class="row">
+          <div class="col-md-8 col-sm-8">
+					<h2 class="card-title">User's Name</h2>
+					<p class="card-text"><strong>Title: </strong> SET TEXT </p>
+					<p class="card-text"><strong>Candy Prefrences: </strong> Spicy | Sweet | Sour </p>
+				</div>
+			  <div class="col-md-4 col-sm-4 text-center">
+					<img class="btn-md" src="assets/images/card-image.png" alt="" style="border-radius:50%;">
+				</div>         
+				<div class="col-md-4 col-sm-4 text-center">
+					<h2><strong> 50 </strong></h2>                    
+					<p><small>Snack Posts</small></p>
+				</div>
+				<div class="col-md-4 col-sm-4 text-center">
+					<h2><strong>1.4K</strong></h2>                    
+					<p><small>Following</small></p>
+				</div>
+				<div class="col-md-4 col-sm-4 text-center">
+					<h2><strong>3.8K</strong></h2>                    
+					<p><small>Followers</small></p>
+				</div>
+			  </div>
+              </div>
+          </div>
+  </div>
+  </div> 
+</div>
+
+<!-- <% snacks.forEach((snack) => { %>
       <h4 id = "snackName"><%= snack.name %></h4>
       <a href="/detail/ <%= snack.id  %> ">View Snack</a>
       <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
@@ -13,6 +47,39 @@
         <button type="submit">Blechk</button>
       </form>
   <% }); %>
-<a href="/snack"> <p>Add a Snack</p></a>
+<a href="/snack"> <p>Add a Snack</p></a> -->
 <!-- add a button and a route that goes to snackadd.ejs -->
 
+
+<!-- Snack cards holding all the users snack info displayed out in 2 or 3 rows -->
+<!-- <% snacks.forEach((snack) => { %>
+<div class="container">
+  <div class="row">
+    <div class="card col-4" style="width: 18rem;">
+      <img src="<%=snack.imgUrl %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= snack.name %></h5>
+        <p class="card-text"><%= snack.description %> </p>
+        <a href="/detail/ <%= snack.id  %> ">View Snack</a>
+      </div>
+    </div>
+  </div>
+</div>
+<% }); %> -->
+
+<% snacks.forEach((snack) => { %>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="<%=snack.imgUrl %>" class="card-img-top" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= snack.name %></h5>
+        <p class="card-text"><%= snack.description %> </p>
+        <a class="card-link" href="/detail/ <%= snack.id  %> ">View Snack</a>
+      </div>
+    </div>
+  </div>
+</div>
+<% }); %>
