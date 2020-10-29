@@ -1,3 +1,4 @@
+
 nav ul li {
   text-decoration: none;
   display: inline-block;
@@ -5,6 +6,7 @@ nav ul li {
 }
 
 h1 {
+<<<<<<< HEAD
   color: chartreuse;
 }
 
@@ -41,4 +43,7 @@ body, html {
 
 .btn-primary{
   margin-top: 10px;
+=======
+  color: #F06543;
+>>>>>>> submain
 }

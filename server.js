@@ -49,7 +49,8 @@ app.get('/', (req, res) => {
 app.use('/auth', require('./routes/auth'));
 app.use('/', require('./routes/create'));
 app.use('/profile',require('./routes/profile'));
-app.use('/detail', require('./routes/detail'))
+app.use('/detail', require('./routes/detail'));
+app.use('/comment', require('./routes/comment'));
 
 
 // server
