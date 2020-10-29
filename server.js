@@ -1,7 +1,3 @@
-// AirBnB JavaScript Guide:
-//  use arrow functions on anonymous functions
-// single qoutations ' '
-
 // requirements
 require('dotenv').config();
 const express = require('express');

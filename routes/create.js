@@ -15,6 +15,8 @@ router.get('/snack', isLoggedIn, (req, res) => {
   res.render('./snack/snack')
 });
 
+// routes
+
 router.post('/snack', isLoggedIn, (req, res) => {
     db.snack.findOrCreate({
       where: {
@@ -28,8 +30,6 @@ router.post('/snack', isLoggedIn, (req, res) => {
       })
     })
   })
-
-
 
 // exports
 module.exports = router;

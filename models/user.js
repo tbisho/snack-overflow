@@ -8,36 +8,27 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class user extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+
     static associate(models) {
-      // define association here
+
       models.user.belongsToMany(models.snack,{through:"user_snack"})
       models.user.hasMany(models.comment)
     }
 
-    // Compares entered password to hashed password
     validPassword(passwordTyped) {
       return bcrypt.compareSync(passwordTyped, this.password);
     };
 
-    // remove the password before serializing
     toJSON() {
       let userData = this.get();
       delete userData.password;
       return userData;
     }
 
-    // compares entered password to a hashed password (runs on login)
-    // no static keyword because it runs on any instance
     validPassword(passwordTyped) {
       return bcrypt.compareSync(passwordTyped, this.password)
     }
 
-    // Make sure to remove the hashed password from the user object before serializing
     toJSON () {
       let userData = this.get()
       delete userData.password
@@ -78,12 +69,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   user.beforeCreate((pendingUser, options) => {
-    // if a user exists & if that user has a password
 
     if (pendingUser && pendingUser.password) {
-      // hash the password
       let hash = bcrypt.hashSync(pendingUser.password, 12);
-      // store the hash as the user's password
       pendingUser.password = hash;
     }
   })

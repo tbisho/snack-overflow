@@ -1,8 +1,13 @@
+// requirements
 const express = require('express');
 const db = require('../models');
 const router = express.Router();
 const passport = require('../config/ppConfig');
 const isLoggedIn = require('../middleware/isLoggedIn');
+
+// middleware
+
+// routes
 
 router.post('/:id',isLoggedIn, (req,res) => {
   db.snack.findOne({
@@ -25,5 +30,6 @@ router.post('/:id',isLoggedIn, (req,res) => {
   })
 })
 
+// exports
 
 module.exports = router;
