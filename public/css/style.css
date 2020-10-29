@@ -7,6 +7,8 @@
   --white: #FFFBFF;
 }
 
+
+
 body {
   background-color: var(--dark-orange);
   color: #FFFBFF;
@@ -25,20 +27,21 @@ body {
   padding-right: 50vh;
   max-height: 200px;
 }
-.welcome-msg {
-  word-wrap: break-word;
-}
 
+.welcome-msg {
+  min-width: 200px;
+}
 
 body, html {
   height: 100%;
+  background-color: #F28705;
 }
 .bg {
-    background-image: url("https://image.freepik.com/free-photo/beer-snacks-like-crackers-chips-cookies-wooden-surface-background_127657-1397.jpg");
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("https://image.freepik.com/free-photo/beer-snacks-like-crackers-chips-cookies-wooden-surface-background_127657-1397.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form-container {
@@ -58,17 +61,52 @@ body, html {
 
 /*--------------------------- End of Home Page CSS -------------------- */
 
+
+
+.profile-header {
+  font-family: 'Vampiro One', cursive;
+  text-align: center;
+  color: #211F26;
+}
+
+.welcome-profile {
+  font-size: 70px;
+}
+
+.profile-msg {
+  font-size: 20px;
+}
+
 .card {
-  columns: 150px 3;
   align-items: center;
   background-color: var(--dark);
   max-height: 150px;
+  min-width: 450px;
+}
+
+.card-item {
+  align-items: center;
 }
 
 .card-title {
   text-align: center;
 }
 
+.card-inverse {
+  margin-bottom: 8vh;
+  min-height: 250px;
+}
+
+
 .card-img-top {
   max-height: 140px;
 }
+
+#snack-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
