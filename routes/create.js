@@ -12,7 +12,6 @@ const isLoggedIn = require('../middleware/isLoggedIn');
 // middleware
 
 router.get('/snack', isLoggedIn, (req, res) => {
-  console.log(isLoggedIn)
   res.render('./snack/snack')
 });
 
