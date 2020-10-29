@@ -1,6 +1,3 @@
-// AirBnB JavaScript Guide:
-//  use arrow functions on anonymous functions
-// single qoutations ' ' 
 // requirements
 const express = require('express');
 const db = require('../models');

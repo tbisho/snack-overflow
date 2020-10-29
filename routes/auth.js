@@ -1,7 +1,3 @@
-// AirBnB JavaScript Guide:
-//  use arrow functions on anonymous functions
-// single qoutations ' '
-
 // requirements
 const express = require('express');
 const db = require('../models')
@@ -23,7 +19,6 @@ router.post('/signup', (req, res) => {
     }
   }).then(([user, created]) => {
     if (created) {
-      console.log('user created');
       passport.authenticate('local', {
         successRedirect: '/snack',
         successFlash: 'Account created and logged in'
