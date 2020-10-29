@@ -25,7 +25,7 @@ router.post('/snack', isLoggedIn, (req, res) => {
         imgUrl: req.body.imgUrl
       }
     }).then(([returnedSnack, created]) => {
-      returnedUser.addSnack(returnedSnack).then( (relationInfo) => {
+      req.user.addSnack(returnedSnack).then( (relationInfo) => {
         res.redirect('/profile')
       })
     })
