@@ -8,8 +8,8 @@
 }
 
 body {
-  background-color: var(--dark-orange);
-  color: #FFFBFF;
+  background-color: var(--dark);
+  color: var(--blue);
 }
 
 .home-title {
@@ -17,6 +17,7 @@ body {
   font-size: 100px;
   text-align: center;
   padding-top: 5vh;
+  color: var(--white);
 }
 
 .welcome {
@@ -24,6 +25,7 @@ body {
   padding-left: 50vh;
   padding-right: 50vh;
   max-height: 200px;
+  color: var(--white);
 }
 
 .welcome-msg {
@@ -32,7 +34,7 @@ body {
 
 body, html {
   height: 100%;
-  background-color: #F28705;
+  background-color: var(--dark);
 }
 .bg {
   background-image: url("https://image.freepik.com/free-photo/beer-snacks-like-crackers-chips-cookies-wooden-surface-background_127657-1397.jpg");

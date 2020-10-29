@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body></body>
     <div class="container-fluid bg">
         <h1 class="home-title">Snack Overflow!</h1>
         <div class="welcome">
@@ -12,25 +12,84 @@
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12"></div>
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <form class="form-container">
+                <form action="/auth/login" method="POST" class="form-container">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="auth-email">Email</label>
+                        <input name= "email" type="email" class="form-control" id="auth-email" aria-describedby="emailHelp">
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else. Unless its for money...</small>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="auth-password">Password</label>
+                        <input name ="password" type="password" class="form-control" id="auth-password">
                     </div>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                        <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember Me</label> -->
                     </div>
-                    <button type="submit" class="btn btn-primary login">Login</button>
-                    <button href="/auth/signup" type="submit" class="btn btn-primary sign-up">Sign Up</button>
-                </form>
+                    <button value="Log In" type="submit" class="btn btn-primary login">Login</button>
+                    <!-- <button type="submit" class="btn btn-primary sign-up">Sign Up</button> -->
+                    <!-- ADD NEW MODAL POPUP HERE -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    SIGN UP
+                    </button>
+  
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create an account to start snacking</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="modal-body">
+                <form action="/auth/signup" method="POST">
+                    <div class="form-group">
+                        <label for="new-email">Email</label>
+                        <input class="form-control" id="new-email" type="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-name">Name</label> 
+                        <input class="form-control" id="new-name" type="text" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">Password</label>
+                        <input class="form-control" id="new-password" type="password" name="password">
+                    </div>
+                </form>
+                
+            </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button value= "Sign up" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
         </div>
     </div>
-</body>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- task list -->
+<!-- add functionality to login form
+    add modal for sign up  
+        modal must basically be signup page functionality
+        keep the launch button so you can launch sign up form
+        --------------------------------
+        put modal button 'demo' where signup is-->
+        
+        

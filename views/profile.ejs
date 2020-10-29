@@ -1,66 +1,64 @@
-<body class="profile-body" style="margin:0;padding:0"></body>
-
-<div class="profile-header">
-<h3 class="welcome-profile">Welcome to your Snack Profile</h3>
-<p class="profile-msg">What kind of snack knowledge will you be bringing us today?</p>
-</div>
-
-
-<div id="profile-card" class="container-fluid">
-<a class="logout" href="/auth/logout">Logout</a> |
-<a class="profile" href="/profile">Profile</a>
-  <div class="row">
-    <div class="col-12">
-      <div class="card card-inverse" style="background-color: #211F26; border-color: #333;">
-        <div class="card-block">
-			  <div class="row">
-          <div class="col-md-8 col-sm-8">
-            <h2 class="card-title">SNack overflow user</h2>
-            <p class="card-text"><strong>Title: </strong> SET TEXT </p>
-            <p class="card-text"><strong>Candy Prefrences: </strong> Spicy | Sweet | Sour </p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+        <h2>Welcome to your Snack Profile</h3>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<h5 class="card-header">
+					Hi UserName
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						User Content
+					</p>
 				</div>
-			  <div class="col-md-4 col-sm-4 text-center">
-				<img class="btn-md" src="assets/images/card-image.png" alt="" style="border-radius:50%;">
-				</div>         
-				<div class="col-md-4 col-sm-4 text-center">
-					<h2><strong> 50 </strong></h2>                    
-					<p><small>Snack Posts</small></p>
+				<div class="card-footer">
+					<a href="/snack"> <p>Add a Snack</p></a>
 				</div>
-				<div class="col-md-4 col-sm-4 text-center">
-					<h2><strong>1.4K</strong></h2>                    
-					<p><small>Following</small></p>
-				</div>
-				<div class="col-md-4 col-sm-4 text-center">
-					<h2><strong>3.8K</strong></h2>                    
-					<p><small>Followers</small></p>
-				</div>
-			  </div>
-              </div>
-          </div>
-    </div>
-  </div> 
-</div>
-
-
-<div class="row">
-<% snacks.forEach((snack) => { %>
-  <div class="col-md-6">
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="<%=snack.imgUrl %>" class="card-img" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title"><%= snack.name %></h5>
-            <p class="card-text"><%= snack.description %> </p>
-            <a class="card-link" href="/detail/ <%= snack.id  %> ">View Snack</a>
-          </div>
-        </div>
+			</div>
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
+	<div class="row">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>
+          What Sort of Snack Wisdom Will You Share With Us?
+        </h3>
       </div>
     </div>
   </div>
-  <% }); %>
+  <div class ="row">
+  <% snacks.forEach((snack, idx) => { %>
+        <div class="col-md-6">
+          <div class="card">
+            <h5 class="card-header">
+              <%= snack.name %>
+            </h5>
+            <div class="card-body">
+              <p class="card-text">
+                <img class = "snack-image"src="<%= snack.imgUrl  %> " />
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class = "container-fluid">
+                <a href="/detail/ <%= snack.id  %> ">View Snack</a>
+              </div> 
+              <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
+                <input type="hidden" value="Delete" name="name"> 
+                <button type="submit">Blechk</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    <% }); %>
+  </div>
 </div>
-
-
