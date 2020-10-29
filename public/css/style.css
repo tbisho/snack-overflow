@@ -21,12 +21,17 @@
 }
 
 body {
+<<<<<<< HEAD
+  color: var(--dark)
+=======
   color: var(--black)
+>>>>>>> submain
 }
 
 body, html {
   height: 100%;
 }
+
 .bg {
     background-image: url("https://image.freepik.com/free-photo/beer-snacks-like-crackers-chips-cookies-wooden-surface-background_127657-1397.jpg");
     height: 100vh;
@@ -47,5 +52,14 @@ body, html {
   background-color: var(--dark) !important;
 }
 
+<<<<<<< HEAD
+.snack-image{
+  min-width: 150px;
+  min-height: 150px;
+  max-width: 400px;
+  max-height: 400px;
+}
+=======
 
 /* Tess's styles for home page in case of github hell */
+>>>>>>> submain

@@ -1,19 +1,64 @@
-<a href="/auth/logout">Logout</a> |
-<a href="/profile">Profile</a>
-<h2>Snacks</h2>
-<h3>Welcome to your Snack Profile</h3>
-
-<p>See Your Snacks (DB pull list goes here)</p>
-
-<% snacks.forEach((snack) => { %>
-      <h4 id = "snackName"><%= snack.name %></h4>
-      <p><%=snack.description%></p>
-      <img height="200px" width="200px" src='<%=snack.imgUrl%>'>
-      <a href="/detail/ <%= snack.id  %> ">View Snack</a>
-      <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
-        <input type="hidden" value="Delete" name="name"> 
-        <button type="submit">Blechk</button>
-      </form>
-  <% }); %>
-<a href="/snack"> <h1>Add a Snack</h1></a>
-<!-- add a button and a route that goes to snackadd.ejs -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+        <h2>Welcome to your Snack Profile</h3>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<h5 class="card-header">
+					Hi UserName
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						User Content
+					</p>
+				</div>
+				<div class="card-footer">
+					<a href="/snack"> <p>Add a Snack</p></a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
+	<div class="row">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>
+          What Sort of Snack Wisdom Will You Share With Us?
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class ="row">
+  <% snacks.forEach((snack, idx) => { %>
+        <div class="col-md-6">
+          <div class="card">
+            <h5 class="card-header">
+              <%= snack.name %>
+            </h5>
+            <div class="card-body">
+              <p class="card-text">
+                <img class = "snack-image"src="<%= snack.imgUrl  %> " />
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class = "container-fluid">
+                <a href="/detail/ <%= snack.id  %> ">View Snack</a>
+              </div> 
+              <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
+                <input type="hidden" value="Delete" name="name"> 
+                <button type="submit">Blechk</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    <% }); %>
+  </div>
+</div>
