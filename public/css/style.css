@@ -21,7 +21,11 @@
 }
 
 body {
+<<<<<<< HEAD
   color: var(--dark)
+=======
+  color: var(--black)
+>>>>>>> submain
 }
 
 body, html {
@@ -48,9 +52,14 @@ body, html {
   background-color: var(--dark) !important;
 }
 
+<<<<<<< HEAD
 .snack-image{
   min-width: 150px;
   min-height: 150px;
   max-width: 400px;
   max-height: 400px;
 }
+=======
+
+/* Tess's styles for home page in case of github hell */
+>>>>>>> submain

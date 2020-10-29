@@ -18,6 +18,7 @@ router.get('/snack', isLoggedIn, (req, res) => {
 // routes
 
 router.post('/snack', isLoggedIn, (req, res) => {
+<<<<<<< HEAD
     db.snack.findOrCreate({
       where: {
         name: req.body.name,
@@ -28,8 +29,28 @@ router.post('/snack', isLoggedIn, (req, res) => {
       req.user.addSnack(returnedSnack).then( (relationInfo) => {
         res.redirect('/profile')
       })
+=======
+  //refactored redundant route  
+  db.snack.findOrCreate({
+    where: {
+      name: req.body.name,
+      description: req.body.description,
+      imgUrl: req.body.imgUrl
+    }
+  }).then(([returnedSnack, created]) => {
+    req.user.addSnack(returnedSnack).then( (relationInfo) => {
+      res.redirect('/profile')
+>>>>>>> submain
     })
   })
+})
+
+
+
+
+
+
+
 
 // exports
 module.exports = router;
