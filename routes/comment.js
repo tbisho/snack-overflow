@@ -9,7 +9,7 @@ const isLoggedIn = require('../middleware/isLoggedIn');
 
 // routes
 
-router.post('/:id',isLoggedIn, (req,res) => {
+router.post('/:id', isLoggedIn, (req,res) => {
   db.snack.findOne({
       where: 
       {
