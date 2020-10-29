@@ -7,8 +7,6 @@
   --white: #FFFBFF;
 }
 
-
-
 body {
   background-color: var(--dark-orange);
   color: #FFFBFF;
@@ -78,10 +76,7 @@ body, html {
 }
 
 .card {
-  align-items: center;
   background-color: var(--dark);
-  max-height: 150px;
-  min-width: 450px;
 }
 
 .card-item {
