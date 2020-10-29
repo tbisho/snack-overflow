@@ -29,7 +29,7 @@ router.post('/snack', isLoggedIn, (req, res) => {
       })
     })
   })
-})
+
 
 
 // exports
