@@ -97,6 +97,8 @@ module.exports = {
     ], {returning: true});
     console.log('snacks: ', bulkSnacks);
 
+    await queryInterface.bulkDelete('user_snacks', null, {truncate: true, cascade: true, restartIdentity: true});
+
     const bulkuserSnacks = await queryInterface.bulkInsert('user_snacks', [
       {
         userId: bulkUsers[0].id,
