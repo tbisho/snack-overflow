@@ -1,6 +1,7 @@
 const db = require('./models')
 const methodOverride = require('method-override')
 
+<<<<<<< HEAD
 //test out db comment create
 //create a comment and associate it with logged in user
 
@@ -67,6 +68,8 @@ db.comment.findOrCreate({
 //   })
 // })
 
+=======
+>>>>>>> submain
 db.comment.create({
   userId: 1,
   content: "This is the best snack"
