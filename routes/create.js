@@ -12,9 +12,10 @@ const isLoggedIn = require('../middleware/isLoggedIn');
 // middleware
 
 router.get('/snack', isLoggedIn, (req, res) => {
-  console.log(isLoggedIn)
   res.render('./snack/snack')
 });
+
+// routes
 
 router.post('/snack', isLoggedIn, (req, res) => {
     db.snack.findOrCreate({
@@ -29,8 +30,6 @@ router.post('/snack', isLoggedIn, (req, res) => {
       })
     })
   })
-
-
 
 // exports
 module.exports = router;
