@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('commentReals', {
+    await queryInterface.createTable('comments', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,7 +11,10 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
-      content: {
+      snackId: {
+        type: Sequelize.INTEGER
+      },
+      text: {
         type: Sequelize.TEXT
       },
       createdAt: {
@@ -25,6 +28,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('commentReals');
+    await queryInterface.dropTable('comments');
   }
 };

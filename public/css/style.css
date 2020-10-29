@@ -21,7 +21,7 @@
 }
 
 body {
-  color: var(--white)
+  color: var(--black)
 }
 
 body, html {
@@ -46,3 +46,6 @@ body, html {
 .btn-primary {
   background-color: var(--dark) !important;
 }
+
+
+/* Tess's styles for home page in case of github hell */
