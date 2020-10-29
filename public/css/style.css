@@ -1,10 +1,48 @@
-
-nav ul li {
-  text-decoration: none;
-  display: inline-block;
-  margin-right: .3em;
+:root {
+  --dark: #211F26;
+  --blue: #52C0D9;
+  --yellow: #F2B705;
+  --orange: #F29F05;
+  --dark-orange: #F28705;
+  --white: #FFFBFF;
 }
 
-h1 {
-  color: #F06543;
+.home-title {
+  font-family: 'Vampiro One', cursive;
+  font-size: 100px;
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.welcome {
+  text-align: center;
+  padding-left: 50vh;
+  padding-right: 50vh;
+}
+
+body {
+  color: var(--white)
+}
+
+body, html {
+  height: 100%;
+}
+.bg {
+    background-image: url("https://image.freepik.com/free-photo/beer-snacks-like-crackers-chips-cookies-wooden-surface-background_127657-1397.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-container {
+  padding: 50px 60px;
+  margin-top: 5vh;
+  -webkit-box-shadow: 7px 18px 63px 4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 18px 63px 4px rgba(0,0,0,0.75);
+  box-shadow: 7px 18px 63px 4px rgba(0,0,0,0.75);
+}
+
+.btn-primary {
+  background-color: var(--dark) !important;
 }
