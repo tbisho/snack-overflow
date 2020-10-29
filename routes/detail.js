@@ -3,6 +3,7 @@ const db = require('../models');
 const router = express.Router();
 const passport = require('../config/ppConfig');
 const isLoggedIn = require('../middleware/isLoggedIn');
+
 const methodOverride = require('method-override')
 
 router.use(methodOverride('_method'))
@@ -12,10 +13,11 @@ router.get('/:id', isLoggedIn, (req, res) => {
     {
       where: {
         id: req.params.id
-      }
+      },
+      include: [db.comment]
     }).then((snackDetails) => {
+    // snackDetails now has an array of comments
+    console.log(snackDetails)
       res.render('./snack/detail', {snack: snackDetails })
     })
   })
-
-module.exports = router;
