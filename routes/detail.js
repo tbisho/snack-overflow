@@ -20,14 +20,4 @@ router.get('/:id', isLoggedIn, (req, res) => {
     })
   })
 
-router.put('/:id', isLoggedIn, (req, res) => {
-  db.snack.update(
-    {
-      description: req.body.description,
-      imgUrl: req.body.imgUrl
-    }).then((rowsUpdated) => {
-      
-    })
-})
-
 module.exports = router;
