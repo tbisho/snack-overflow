@@ -7,15 +7,19 @@
 
 <% snacks.forEach((snack) => { %>
       <h4 id = "snackName"><%= snack.name %></h4>
+      <p><%=snack.description%></p>
+      <img height="200px" width="200px" src='<%=snack.imgUrl%>'>
       <a href="/detail/ <%= snack.id  %> ">View Snack</a>
       <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
         <input type="hidden" value="Delete" name="name"> 
         <button type="submit">Blechk</button>
       </form>
+      <!-- allow as user to add an image if they want to change it -->
+      <form method="POST" action="/edit/<%=snack.id%>">
+        <input id="newImage" type="text" name="imgUrl"value="janky Url here">
+        <button type="submit">update image</button>
+      </form>
+      
   <% }); %>
-<a href="/snack"> <p>Add a Snack</p></a>
+<a href="/snack"> <h1>Add a Snack</h1></a>
 <!-- add a button and a route that goes to snackadd.ejs -->
-<<<<<<< HEAD
-=======
-
->>>>>>> submain
