@@ -55,7 +55,28 @@ body, html {
   max-height: 400px;
 }
 
-.profile-page{
+/* profile page CSS */
+
+.profile-page {
   background-color: var(--dark);
   color: var(--blue);
+}
+
+.profile-header {
+  
+}
+
+.profile-card {
+  background-color: var(--dark);
+}
+.profile-card-header {
+  color: var(--dark-orange)
+}
+
+.profile-card-body {
+  color: var(--blue)
+}
+
+.profile-card-footer {
+  opacity: 90%;
 }
