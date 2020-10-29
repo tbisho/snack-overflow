@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       
       models.snack.belongsToMany(models.user,{through: "User_Snack"})
+      models.snack.hasMany(models.comment)
     }
   };
   snack.init({
