@@ -21,12 +21,13 @@
 }
 
 body {
-  color: var(--white)
+  color: var(--dark)
 }
 
 body, html {
   height: 100%;
 }
+
 .bg {
     background-image: url("https://image.freepik.com/free-photo/beer-snacks-like-crackers-chips-cookies-wooden-surface-background_127657-1397.jpg");
     height: 100vh;
@@ -45,4 +46,11 @@ body, html {
 
 .btn-primary {
   background-color: var(--dark) !important;
+}
+
+.snack-image{
+  min-width: 150px;
+  min-height: 150px;
+  max-width: 400px;
+  max-height: 400px;
 }
