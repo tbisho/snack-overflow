@@ -1,12 +1,21 @@
 # Snack Overflow
+Welcome to Snack Overflow! We are the leading social site for all your snacking needs! Sign up to let the world know about all your snacking hotspots and discuss with fellow enthusiasts.
 
 ## About 
 
+Snack Overflow is a fullsnack application design for snack enthusiasts. The goal of our app is to allow users to log in and create an account to view their favorite snacks and photos and details to their profile.
+
+
 ## User Stories
+As a user, I would like to be able to create a profile full of my favorite snacks.
+As a user, I would like to be able to add new snacks, delete old snacks, and leave comments
 
 ## Languages Written In
+Node
+HTML5
+CSS3
+Bootstrap
 
-## Included
 
 ### User DB Model
 
@@ -21,34 +30,62 @@
 
 ### Snack DB Model
 
- Column Name | Data Type | Notes |
+Column Name | Data Type | Notes |
+|---------------------|-------------------|--------------------------|
+| id  | Integer | Serial Primary Key, Auto-generated |
+| Name | String | Must be provided, user input |
+| Description | String | Must be provided, user input |
+| imgUrl | String | Must be provided, we recommend imgur! |
+| createdAt | Date | Auto-generated |
+| updatedAt | Date | Auto-generated |
+
+
 
 ### Join Table Model
 
- Column Name | Data Type | Notes |
+Column Name | Data Type | Notes |
+| ---------------- | ------------- | -------------- |
+| userId | Integer | Pulled from User DB |
+| snackId | Integer | Pulled from Snack DB |
 
-### Default User Routes
+### Comment Table Model 
 
-| Method | Path | Location | Purpose |
+Column Name | Data Type | Notes |
+|------------------ | ----------------- | -------------------|
+| userId | Integer | Pulled from user DB |
+| snackId | Integer | Pulled from snack DB |
+| comment | Text | Must be provided, user input |
 
-### Default Auth Routes
-
-| Method | Path | Location | Purpose |
-| ------ | ---------------- | -------------- | ------------------- |
-| GET | / | server.js | Home page |
-| GET | /auth/login | auth.js | Login form |
-| GET | /auth/signup | auth.js | Signup form |
-| POST | /auth/login | auth.js | Login user |
-| POST | /auth/signup | auth.js | Creates User |
-| GET | /auth/logout | auth.js | Removes session info |
-| GET | /profile | server.js | Regular User Profile |
 
 ### Wire Frames
+[Wire Frames](./public/images/wireframe.png)
+
+### Site Images
+[Home Page](./public/images/homepage.png)
+[Profile Page](./public/images/profile.png)
+[Modal Feature](./public/images/modal.png)
 
 ### Code Captures
+Mario 
+![Delete Route](./public/images/delete.png)
+
+Tess
+![Create Route](./public/images/create.png)
+
+Martin
+![Profile Route](./public/images/get.png)
 
 ### Contributor Githubs
 
+https://github.com/tbisho/
+https://github.com/mgcarbonell
+https://github.com/martinacruz
+
 ### About Us
 
-We are three budding fullstack developers attending General Assembly's Software Engineering Immersive Remote class. 
+We are three budding fullstack developers attending General Assembly's Software Engineering Immersive Remote class.  
+
+### Future Developments
+
+Edit Route
+API 
