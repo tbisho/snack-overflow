@@ -11,17 +11,18 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <% if (!currentUser) { %>
-            <li><a href="/auth/signup">Signup</a></li>
-            <li><a href="/auth/login">Login</a></li>
-          <% } else { %>
-            <li><a href="/auth/logout">Logout</a></li>
-            <li><a href="/profile">Profile</a></li>
-          <% } %>
-        </ul>
-      </nav>
+      <div class="topnav">
+        <nav>
+          <ul class="navlist">
+            <% if (!currentUser) { %>
+              <li><a href="/auth/signup">Signup</a></li>
+            <% } else { %>
+              <li><a href="/auth/logout">Logout</a></li>
+              <li><a href="/profile">Profile</a></li>
+            <% } %>
+          </ul>
+        </nav>
+      </div>  
     </header>
     <%- include('partials/alerts') %>
     <%- body %>
@@ -32,3 +33,4 @@
   </body>
 </div>
 </html>
+
