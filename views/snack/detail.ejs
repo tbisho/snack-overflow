@@ -22,4 +22,12 @@
             </div>
         </div>
     </div>
-</div>
+    
+    <button type="submit">Post Comment</button>
+</form>
+
+<%snack.comments.forEach(comment => { %>
+    <ul>
+        <li><%=comment.text%></li>
+    </ul>
+<% }) %>
