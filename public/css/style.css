@@ -53,7 +53,7 @@
 }
 
 body {
-  color: var(--dark-orange)
+  color: var(--white)
 }
 
 body, html {
@@ -116,3 +116,16 @@ body, html {
   opacity: 90%;
 }
 
+/* create a snack */
+#blackBg{
+  background-color: black;
+}
+
+#headerBk{
+  color: black;
+  
+}
+
+#cardTop{
+  margin: 10px;
+}

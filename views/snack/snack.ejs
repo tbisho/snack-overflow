@@ -3,26 +3,32 @@
 		<div class="col-md-4">
 		</div>
 		<div class="col-md-4">
-			<div class="card">
-				<h5 class="card-header">
+			<div id="cardTop" class="card">
+				<h5 id="headerBk" class="card-header">
 					Add a snack!
 				</h5>
-				<div class="card-body">
+				<div id="blackBg" class="card-body">
 					<p class="card-text">
 						<form action="/snack" method="post">
+							<div class="form-group">
                             <!-- add a snack name, imgUrl, description -->
                             <p>
                                 <label for="snackName">Snack:</label>
-                                <input id="snackName" type="text" name="name" value="">
-                            </p>
+                                <input class="form-control" id="snackName" type="text" name="name" value="">
+							</p>
+						</div>
+						<div class="form-group">
                             <p>
                                 <label for="snackDescription">Description</label>
-                                <input id="snackDescription" type="text" name="description" value="">
-                            </p>
+                                <input class="form-control"  id="snackDescription" type="text" name="description" value="">
+							</p>
+						</div>
+						<div class="form-group">
                             <p>
                                 <label for="imgUrl">Image URL:</label>
-                                <input id="imgUrl" type="text" name="imgUrl" value="">
-                            </p>
+                                <input class="form-control" id="imgUrl" type="text" name="imgUrl" value="">
+							</p>
+						</div>
                             <input type="submit" value="add snack">
                         </form>
 					</p>
