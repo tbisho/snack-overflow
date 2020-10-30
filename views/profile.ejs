@@ -12,7 +12,6 @@
         </div>
         <div class="col-md-4">
           <div class="card" class="profile-card">
-
             <div class="card-body" class="profile-card-body">
               <p class="card-text" class="profile-card-text">
                 <p>Hey there, <%= currentUser.dataValues.name %> </p>
@@ -43,12 +42,11 @@
                 </p>
               </div>
               <div class="card-footer" >
-                <div class = "container-fluid">
-                  <a class="btn btn-primary" href="/detail/ <%= snack.id  %> ">View Snack</a>
-                </div> 
+                <div class = "container-fluid" class="button container">
+                  <a class="btn btn-primary" href="/detail/ <%= snack.id  %> ">View Snack</a>                </div> 
                 <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
                   <input type="hidden" value="Delete" name="name"> 
-                  <button type="submit">Gross</button>
+                  <button class="btn btn-primary" type="submit">Gross</button>
                 </form>
               </div>
             </div>
