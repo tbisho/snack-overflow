@@ -19,8 +19,7 @@ router.get('/', isLoggedIn, (req, res) => {
 })
 
 router.delete('/:id', isLoggedIn, (req, res) => {
-  db.snack.findOrCreate( 
-    {
+  db.snack.findOrCreate({
       where: 
       {
         id: req.params.id

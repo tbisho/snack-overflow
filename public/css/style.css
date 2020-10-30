@@ -192,3 +192,10 @@ a.btn {
   background-color: var(--light-blue) !important;
   color: var(--dark) !important;
 }
+
+/* snack comments */
+
+#snack-comments {
+  float: right !important;
+  background-color: var(--light-blue) 0.3 !important;
+}

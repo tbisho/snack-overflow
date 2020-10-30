@@ -18,7 +18,6 @@ router.get('/snack', isLoggedIn, (req, res) => {
 // routes
 
 router.post('/snack', isLoggedIn, (req, res) => {
-  //refactored redundant route  
   db.snack.findOrCreate({
     where: {
       name: req.body.name,
