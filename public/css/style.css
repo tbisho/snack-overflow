@@ -4,6 +4,7 @@
   --blue: #52c0d9;
   --light-blue: #7bc7d8;
   --dark-blue: #3e8fa1;
+  --darker-blue: #1d4852;
   --yellow: #F2B705;
   --orange: #F29F05;
   --dark-orange: #F28705;
@@ -118,11 +119,13 @@ body, html {
 .card {
   background-color: var(--dark-blue);
   color: var(--white);
+  border: 1px solid var(--darker-blue);
   text-align: center;
   margin-bottom: 20px;
   margin-top: 20px;
   width: 400px;
   border-radius: 15px;
+  box-shadow: 0px 0px 4px 5px var(--darker-blue) ;
 }
 
 #wrapper {
@@ -156,12 +159,18 @@ a.btn {
   float: center;
 }
 
-#view-snack {
-  float: left;
+#add-snack:hover { 
+  transform: scale(1.2);
 }
 
-a.btn:hover { 
+#view-snack {
+  color: var(--light-blue) !important;
+  transition: 0.3;
+}
 
+#view-snack:hover {
+  color:var(--white) !important;
+  background-color: var(--dark-orange) !important;
 }
 
 #delete-snack {
@@ -177,4 +186,10 @@ a.btn:hover {
 
 .detail-header {
   text-align: center;
+}
+
+/* modal */
+.modal-content{
+  background-color: var(--light-blue) !important;
+  color: var(--dark) !important;
 }

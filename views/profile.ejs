@@ -39,7 +39,7 @@
               </div>
               <div class="card-footer" >
                 <div class = "container-fluid" class="buttonContainer">
-                  <a class="btn btn-primary" id="view-snack" href="/detail/ <%= snack.id  %> ">View Snack</a>                </div> 
+                  <button class="btn btn-primary float-left" id="view-snack" onclick="location.href='/detail/ <%= snack.id  %>' ">View Snack</button>                </div> 
                 <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
                   <input type="hidden" value="Delete" name="name"> 
                   <button class="btn btn-primary" id= "delete-snack" type="submit">Gross</button>
