@@ -49,9 +49,8 @@
 
 .welcome {
   text-align: center;
-  padding-left: 50vh;
-  padding-right: 50vh;
-  max-height: 200px;
+  /* padding-left: 50vh;
+  padding-right: 50vh; */
   color: var(--white);
 }
 
