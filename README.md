@@ -58,12 +58,12 @@ Column Name | Data Type | Notes |
 
 
 ### Wire Frames
-[Wire Frames](./public/images/wireframe.png)
+![Wire Frames](./public/images/wireframe.png)
 
 ### Site Images
-[Home Page](./public/images/homepage.png)
-[Profile Page](./public/images/profile.png)
-[Modal Feature](./public/images/modal.png)
+![Home Page](./public/images/homepage.png)
+![Profile Page](./public/images/profile.png)
+![Modal Feature](./public/images/modal.png)
 
 ### Code Captures
 Mario 
