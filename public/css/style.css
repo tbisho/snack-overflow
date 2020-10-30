@@ -121,3 +121,17 @@ body, html {
   opacity: 90%;
 }
 
+.card-title, .card-text {
+  color: var(--dark);
+  font-size: 30px;
+  text-align: center;
+}
+
+.card-title {
+  border-bottom: 1px solid var(--dark);
+  text-align: center;
+}
+
+.detail-header {
+  text-align: center;
+}
