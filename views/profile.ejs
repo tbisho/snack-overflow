@@ -2,8 +2,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <div class="page-header" class="profile-header">
-          <h2>Welcome to your Snack Profile</h3>
+        <div class="page-header" >
+          <h1 class="profile-header">Welcome to your Snack Profile</h1>
           </div>
         </div>
       </div>
@@ -13,7 +13,7 @@
         <div class="col-md-4">
           <div class="card" class="profile-card">
             <h5 class="card-header" class="profile-card-header">
-              Hi UserName
+              Hey there, <%= currentUser.dataValues.name %> 
             </h5>
             <div class="card-body" class="profile-card-body">
               <p class="card-text" class="profile-card-text">
