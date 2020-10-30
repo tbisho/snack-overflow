@@ -92,8 +92,8 @@ API
 
 ### Credits
 
-Jacob for giving us the golden ratio 
-James for fixing the golden ratio
-Seanny for assisting with github workflow
-Michael for simplifying out create route
-All of the GA TA's during office hours 
+* Jacob for giving us the golden ratio 
+* James for fixing the golden ratio
+* Seanny for assisting with github workflow
+* Michael for simplifying out create route
+* All of the GA TA's during office hours 
