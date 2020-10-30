@@ -7,6 +7,7 @@
   --yellow: #F2B705;
   --orange: #F29F05;
   --dark-orange: #F28705;
+  --red: #e40f0f;
   --white: #FFFBFF;
 }
 
@@ -108,8 +109,8 @@ body, html {
 #profile-subheader {
   font-size: 50px;
   text-align: center;
-  padding: 10px;
-  margin: 0 auto;
+  padding-top: 10px;
+  padding-right: 20px;
   font-weight: bold;
 
 }
@@ -145,18 +146,35 @@ body, html {
   opacity: 90%;
 }
 
-/* anchor tags as buttons */
+/* profile page button anchor styling */
 
-a.btn {border-radius: .25rem; border: 1px solid transparent; padding: .5rem 1rem; color: var(--light-blue); }
-a.btn:hover { border-radius: .25rem; }
-
-<<<<<<< HEAD
-.btn {
+a.btn {
   color: var(--light-blue);
 }
-=======
-.detail-header {
-  text-align: center;
+
+#add-snack {
+  float: center;
+}
+
+#view-snack {
+  float: left;
+}
+
+a.btn:hover { 
 
 }
->>>>>>> submain
+
+#delete-snack {
+  color: var(--light-blue) !important;
+  float: right;
+  transition: 0.3;
+}
+
+#delete-snack:hover{
+  color: var(--white) !important;
+  background-color: var(--red) !important;
+}
+
+.detail-header {
+  text-align: center;
+}
