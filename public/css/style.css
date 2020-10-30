@@ -89,6 +89,10 @@ body, html {
 
 /* profile page CSS */
 
+.current-user {
+  font-size: large;
+}
+
 .profile-page {
   background-color: var(--dark);
   color: var(--light-blue);
@@ -106,6 +110,7 @@ body, html {
   text-align: center;
   padding: 10px;
   margin: 0 auto;
+  font-weight: bold;
 
 }
 
@@ -144,3 +149,7 @@ body, html {
 
 a.btn {border-radius: .25rem; border: 1px solid transparent; padding: .5rem 1rem; color: var(--light-blue); }
 a.btn:hover { border-radius: .25rem; }
+
+.btn {
+  color: var(--light-blue);
+}

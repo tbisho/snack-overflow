@@ -14,7 +14,7 @@
           <div class="card" class="profile-card">
             <div class="card-body" class="profile-card-body">
               <p class="card-text" class="profile-card-text">
-                <p>Hey there, <%= currentUser.dataValues.name %> </p>
+                <p class="current-user">Hey there, <%= currentUser.dataValues.name %> </p>
                 <a class="btn btn-primary" href="/snack">Add a Snack</a>
               </p>
             </div>
@@ -42,7 +42,7 @@
                 </p>
               </div>
               <div class="card-footer" >
-                <div class = "container-fluid" class="button container">
+                <div class = "container-fluid" class="buttonContainer">
                   <a class="btn btn-primary" href="/detail/ <%= snack.id  %> ">View Snack</a>                </div> 
                 <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
                   <input type="hidden" value="Delete" name="name"> 
