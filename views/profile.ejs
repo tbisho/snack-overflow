@@ -1,64 +1,67 @@
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="page-header">
-        <h2>Welcome to your Snack Profile</h3>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4">
-		</div>
-		<div class="col-md-4">
-			<div class="card">
-				<h5 class="card-header">
-					Hi UserName
-				</h5>
-				<div class="card-body">
-					<p class="card-text">
-						User Content
-					</p>
-				</div>
-				<div class="card-footer">
-					<a href="/snack"> <p>Add a Snack</p></a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-		</div>
-	</div>
-	<div class="row">
+<body class="profile-page">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <h3>
-          What Sort of Snack Wisdom Will You Share With Us?
-        </h3>
+        <div class="page-header" >
+          <h1 class="profile-header">Welcome to your Snack Profile</h1>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class ="row">
-  <% snacks.forEach((snack, idx) => { %>
-        <div class="col-md-6">
-          <div class="card">
-            <h5 class="card-header">
-              <%= snack.name %>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <div class="card" class="profile-card">
+            <h5 class="card-header" class="profile-card-header">
+              Hey there, <%= currentUser.dataValues.name %> 
             </h5>
-            <div class="card-body">
-              <p class="card-text">
-                <img class = "snack-image"src="<%= snack.imgUrl  %> " />
+            <div class="card-body" class="profile-card-body">
+              <p class="card-text" class="profile-card-text">
+                User Content
               </p>
             </div>
-            <div class="card-footer">
-              <div class = "container-fluid">
-                <a href="/detail/ <%= snack.id  %> ">View Snack</a>
-              </div> 
-              <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
-                <input type="hidden" value="Delete" name="name"> 
-                <button type="submit">Blechk</button>
-              </form>
+            <div class="card-footer" class="profile-card-footer">
+              <a href="/snack"> <p>Add a Snack</p></a>
             </div>
           </div>
         </div>
-    <% }); %>
-  </div>
-</div>
+        <div class="col-md-4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="profile-subheader">
+              What Sort of Snack Wisdom Will You Share With Us?
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class ="row">
+        <% snacks.forEach((snack, idx) => { %>
+          <div class="col-md-6">
+            <div class="card" class="snack-card">
+              <h5 class="card-header" class="profile-snack-header">
+                <%= snack.name %>
+              </h5>
+              <div class="card-body" class="profile-snack-header">
+                <p class="card-text" class="profile-snack-header">
+                  <img class = "snack-image"src="<%= snack.imgUrl  %> " />
+                </p>
+              </div>
+              <div class="card-footer" class="profile-snack-header">
+                <div class = "container-fluid">
+                  <a href="/detail/ <%= snack.id  %> ">View Snack</a>
+                </div> 
+                <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
+                  <input type="hidden" value="Delete" name="name"> 
+                  <button type="submit">Gross</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+</body>  
+    

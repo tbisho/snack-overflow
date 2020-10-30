@@ -1,17 +1,44 @@
 :root {
   --dark: #211F26;
-  --blue: #52C0D9;
+  --burnt: #420202;
+  --blue: #52c0d9;
+  --dark-blue: #3e8fa1;
   --yellow: #F2B705;
   --orange: #F29F05;
   --dark-orange: #F28705;
   --white: #FFFBFF;
 }
 
-body {
+/* Top navbar */
+.topnav {
   background-color: var(--dark);
-  color: var(--blue);
+  overflow: hidden;
 }
 
+.topnav a {
+  float: left;
+  color: var(--yellow);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: var(--orange);
+  color: var(--dark);
+}
+
+.topnav a.active {
+  background-color: var(--dark-orange);
+  color: white;
+}
+
+.navlist {
+  list-style: none;
+}
+
+/* home page */
 .home-title {
   font-family: 'Vampiro One', cursive;
   font-size: 100px;
@@ -28,8 +55,8 @@ body {
   color: var(--white);
 }
 
-.welcome-msg {
-  min-width: 200px;
+body {
+  color: var(--white)
 }
 
 body, html {
@@ -58,11 +85,39 @@ body, html {
   background-color: var(--dark) !important;
 }
 
-.create-container {
-  padding: 50px 60px;
-  margin-top: 5vh;
-  max-width: 480px;
-  min-width: 430px;
-  -webkit-box-shadow: 7px 18px 63px 4px rgba(0,0,0,0.75);
-  -moz-box-shadow: 7px 18px 63px 4px rgba(0,0,0,0.75);
-  box-shadow: 7px 18px 63px 4px rgba(0,0,0,0.75);
+.snack-image{
+  min-width: 150px;
+  min-height: 150px;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* profile page CSS */
+
+.profile-page {
+  background-color: var(--dark);
+  color: var(--blue);
+}
+
+.profile-header {
+  font-family: 'Vampiro One', cursive;
+  font-size: 80px;
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.profile-card {
+  background-color: var(--dark) !important;
+}
+.profile-card-header {
+  color: var(--dark-orange)
+}
+
+.profile-card-body {
+  color: var(--blue)
+}
+
+.profile-card-footer {
+  opacity: 90%;
+}
+
