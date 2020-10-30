@@ -101,7 +101,7 @@ body, html {
   text-align: center;
   padding: 10px;
   margin: 0 auto;
-  padding: 10px 200px  0;
+
 }
 
 .card {
@@ -126,16 +126,16 @@ body, html {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-/* 
-.profile-card-header {
-
-} */
 
 .profile-card-body {
-  color: var(--blue)
+  color: var(--light-blue)
 }
 
 .profile-card-footer {
   opacity: 90%;
 }
 
+/* anchor tags as buttons */
+
+a.btn {border-radius: .25rem; border: 1px solid transparent; padding: .5rem 1rem; color: var(--light-blue); }
+a.btn:hover { border-radius: .25rem; }
