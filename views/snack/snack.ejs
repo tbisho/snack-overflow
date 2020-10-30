@@ -1,25 +1,39 @@
-<!-- we  need to add an if.user statement so this is only accessed by logged in users -->
-<!-- add a form that will allow users to create a snack -->
-<h1>Add a Snack</h1>
-<!-- action is sending the user back to snack page-->
-<form action="/snack" method="post">
-    <!-- add a snack name, imgUrl, description -->
-    <p>
-        <label for="snackName">Snack:</label>
-        <input id="snackName" type="text" name="name" value="">
-    </p>
-    <p>
-        <label for="snackDescription">Description</label>
-        <input id="snackDescription" type="text" name="description" value="">
-    </p>
-    <p>
-        <label for="imgUrl">Image URL:</label>
-        <input id="imgUrl" type="text" name="imgUrl" value="">
-    </p>
-    <input type="submit" value="add snack">
-</form>
-
-
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<h5 class="card-header">
+					Add a snack!
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						<form action="/snack" method="post">
+                            <!-- add a snack name, imgUrl, description -->
+                            <p>
+                                <label for="snackName">Snack:</label>
+                                <input id="snackName" type="text" name="name" value="">
+                            </p>
+                            <p>
+                                <label for="snackDescription">Description</label>
+                                <input id="snackDescription" type="text" name="description" value="">
+                            </p>
+                            <p>
+                                <label for="imgUrl">Image URL:</label>
+                                <input id="imgUrl" type="text" name="imgUrl" value="">
+                            </p>
+                            <input type="submit" value="add snack">
+                        </form>
+					</p>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
+</div>
 
 <!-- another hidden form with snacks already listed that they can add? -->
 
