@@ -150,6 +150,13 @@ body, html {
 a.btn {border-radius: .25rem; border: 1px solid transparent; padding: .5rem 1rem; color: var(--light-blue); }
 a.btn:hover { border-radius: .25rem; }
 
+<<<<<<< HEAD
 .btn {
   color: var(--light-blue);
 }
+=======
+.detail-header {
+  text-align: center;
+
+}
+>>>>>>> submain

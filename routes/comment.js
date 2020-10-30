@@ -21,8 +21,10 @@ router.post('/:id', isLoggedIn, (req,res) => {
           snackId: req.params.id,
           userId: req.user.id
       }).then((createdComment) => {
+        //   console.log(createdComment)
           foundSnack.addComment(createdComment)
           req.user.addComment(createdComment)
+          console.log(createdComment)
           res.redirect(`/detail/${req.params.id}`)
       }).catch(error => {
           res.send(error)
