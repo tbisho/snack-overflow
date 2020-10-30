@@ -1,11 +1,14 @@
 :root {
-  --dark: #211F26;
+  --dark: #3b3941;
   --burnt: #420202;
   --blue: #52c0d9;
+  --light-blue: #7bc7d8;
   --dark-blue: #3e8fa1;
+  --darker-blue: #1d4852;
   --yellow: #F2B705;
   --orange: #F29F05;
   --dark-orange: #F28705;
+  --red: #e40f0f;
   --white: #FFFBFF;
 }
 
@@ -17,7 +20,7 @@
 
 .topnav a {
   float: left;
-  color: var(--yellow);
+  color: var(--light-blue);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -25,13 +28,13 @@
 }
 
 .topnav a:hover {
-  background-color: var(--orange);
+  background-color: var(--blue);
   color: var(--dark);
 }
 
 .topnav a.active {
-  background-color: var(--dark-orange);
-  color: white;
+  background-color: var(--dark-blue);
+  color: var(--dark-orange);
 }
 
 .navlist {
@@ -84,18 +87,16 @@ body, html {
   background-color: var(--dark) !important;
 }
 
-.snack-image{
-  min-width: 150px;
-  min-height: 150px;
-  max-width: 400px;
-  max-height: 400px;
-}
 
 /* profile page CSS */
 
+.current-user {
+  font-size: large;
+}
+
 .profile-page {
   background-color: var(--dark);
-  color: var(--blue);
+  color: var(--light-blue);
 }
 
 .profile-header {
@@ -105,33 +106,89 @@ body, html {
   padding-top: 5vh;
 }
 
-.profile-card {
-  background-color: var(--dark) !important;
+#profile-subheader {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 20px;
+  font-weight: bold;
+
 }
-.profile-card-header {
-  color: var(--dark-orange)
+
+.card {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: 1px solid var(--darker-blue);
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 4px 5px var(--darker-blue) ;
+}
+
+#wrapper {
+  min-width: 400px;
+}
+
+.card-img-top {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 400px;
+  max-height: 400px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .profile-card-body {
-  color: var(--blue)
+  color: var(--light-blue)
 }
 
 .profile-card-footer {
   opacity: 90%;
 }
 
-.card-title, .card-text {
-  color: var(--dark);
-  font-size: 30px;
-  text-align: center;
+/* profile page button anchor styling */
+
+a.btn {
+  color: var(--light-blue);
 }
 
-.card-title {
-  border-bottom: 1px solid var(--dark);
-  text-align: center;
+#add-snack {
+  float: center;
+}
+
+#add-snack:hover { 
+  transform: scale(1.2);
+}
+
+#view-snack {
+  color: var(--light-blue) !important;
+  transition: 0.3;
+}
+
+#view-snack:hover {
+  color:var(--white) !important;
+  background-color: var(--dark-orange) !important;
+}
+
+#delete-snack {
+  color: var(--light-blue) !important;
+  float: right;
+  transition: 0.3;
+}
+
+#delete-snack:hover{
+  color: var(--white) !important;
+  background-color: var(--red) !important;
 }
 
 .detail-header {
   text-align: center;
+}
 
+/* modal */
+.modal-content{
+  background-color: var(--light-blue) !important;
+  color: var(--dark) !important;
 }

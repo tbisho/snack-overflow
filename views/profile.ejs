@@ -12,50 +12,37 @@
         </div>
         <div class="col-md-4">
           <div class="card" class="profile-card">
-            <h5 class="card-header" class="profile-card-header" style="text-align: center;">
-              Hey there, <%= currentUser.dataValues.name %> 
-            </h5>
             <div class="card-body" class="profile-card-body">
               <p class="card-text" class="profile-card-text">
-                User Content
+                <p class="current-user">Hey there, <%= currentUser.dataValues.name %> </p>
+                <p>Share your snack wisdom!</p>
+                <a class="btn btn-primary" id="add-snack" href="/snack">Add a Snack</a>
               </p>
             </div>
             <div class="card-footer" class="profile-card-footer">
-              <a href="/snack" style="text-align: center;"> <p>Add a Snack</p></a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
         </div>
       </div>
-      <div class="row">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="profile-subheader">
-              What Sort of Snack Wisdom Will You Share With Us?
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class ="row">
+      <div class ="row" class="card-deck" >
         <% snacks.forEach((snack, idx) => { %>
-          <div class="col-md-6">
-            <div class="card" class="snack-card">
-              <h5 class="card-header" class="profile-snack-header">
-                <%= snack.name %>
-              </h5>
-              <div class="card-body" class="profile-snack-header">
-                <p class="card-text" class="profile-snack-header">
-                  <img class = "snack-image"src="<%= snack.imgUrl  %> " />
+          <div class="col-md-4" id="wrapper" >
+            <div class="card">
+              <img class="card-img-top" src="<%= snack.imgUrl  %>" alt = "snack picture" >
+            </h5>
+            <div class="card-body" >
+              <p class="card-text" >
+                <p class="profile-snack-header" id="snack-name"> <%= snack.name %></p>
                 </p>
               </div>
-              <div class="card-footer" class="profile-snack-header">
-                <div class = "container-fluid">
-                  <a href="/detail/ <%= snack.id  %> ">View Snack</a>
-                </div> 
+              <div class="card-footer" >
+                <div class = "container-fluid" class="buttonContainer">
+                  <button class="btn btn-primary float-left" id="view-snack" onclick="location.href='/detail/ <%= snack.id  %>' ">View Snack</button>                </div> 
                 <form method="POST" action="/profile/<%= snack.id %>?_method=DELETE%>">
                   <input type="hidden" value="Delete" name="name"> 
-                  <button type="submit">Gross</button>
+                  <button class="btn btn-primary" id= "delete-snack" type="submit">Gross</button>
                 </form>
               </div>
             </div>
