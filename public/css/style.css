@@ -1,7 +1,8 @@
 :root {
-  --dark: #211F26;
+  --dark: #3b3941;
   --burnt: #420202;
   --blue: #52c0d9;
+  --light-blue: #7bc7d8;
   --dark-blue: #3e8fa1;
   --yellow: #F2B705;
   --orange: #F29F05;
@@ -17,7 +18,7 @@
 
 .topnav a {
   float: left;
-  color: var(--yellow);
+  color: var(--light-blue);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -25,13 +26,13 @@
 }
 
 .topnav a:hover {
-  background-color: var(--orange);
+  background-color: var(--blue);
   color: var(--dark);
 }
 
 .topnav a.active {
-  background-color: var(--dark-orange);
-  color: white;
+  background-color: var(--dark-blue);
+  color: var(--dark-orange);
 }
 
 .navlist {
@@ -80,18 +81,12 @@ body, html {
   background-color: var(--dark) !important;
 }
 
-.snack-image{
-  min-width: 150px;
-  min-height: 150px;
-  max-width: 400px;
-  max-height: 400px;
-}
 
 /* profile page CSS */
 
 .profile-page {
   background-color: var(--dark);
-  color: var(--blue);
+  color: var(--light-blue);
 }
 
 .profile-header {
@@ -101,12 +96,37 @@ body, html {
   padding-top: 5vh;
 }
 
-.profile-card {
-  background-color: var(--dark) !important;
+#profile-subheader {
+  font-size: 50px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  padding: 10px 200px 10px 0;
 }
+
+.card {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 400px
+}
+
+#wrapper {
+  min-width: 400px;
+}
+
+.card-img-top {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 400px;
+  max-height: 400px;
+}
+/* 
 .profile-card-header {
-  color: var(--dark-orange)
-}
+
+} */
 
 .profile-card-body {
   color: var(--blue)

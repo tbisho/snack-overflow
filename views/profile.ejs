@@ -29,27 +29,22 @@
         </div>
       </div>
       <div class="row">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="profile-subheader">
-              What Sort of Snack Wisdom Will You Share With Us?
+            <h3 id="profile-subheader">
+              What is your snack wisdom?
             </h3>
-          </div>
-        </div>
       </div>
-      <div class ="row">
+      <div class ="row" class="card-deck" >
         <% snacks.forEach((snack, idx) => { %>
-          <div class="col-md-6">
-            <div class="card" class="snack-card">
-              <h5 class="card-header" class="profile-snack-header">
-                <%= snack.name %>
-              </h5>
-              <div class="card-body" class="profile-snack-header">
-                <p class="card-text" class="profile-snack-header">
-                  <img class = "snack-image"src="<%= snack.imgUrl  %> " />
+          <div class="col-md-4" id="wrapper" >
+            <div class="card">
+              <img class="card-img-top" src="<%= snack.imgUrl  %>" alt = "snack picture" >
+            </h5>
+            <div class="card-body" >
+              <p class="card-text" >
+                <p class="profile-snack-header"> <%= snack.name %></p>
                 </p>
               </div>
-              <div class="card-footer" class="profile-snack-header">
+              <div class="card-footer" >
                 <div class = "container-fluid">
                   <a href="/detail/ <%= snack.id  %> ">View Snack</a>
                 </div> 
